@@ -1,0 +1,17 @@
+{
+  "name": "osu-lb",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "backend:dev": "cd backend && bun --watch index.ts",
+    "frontend:dev": "cd frontend && bun run dev",
+    "start": "bun run frontend:build && bun run backend:prod"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
