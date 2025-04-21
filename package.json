@@ -3,8 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "backend:dev": "cd backend && bun --watch index.ts",
+    "backend:dev": "cd backend && bun --watch server.ts",
     "frontend:dev": "cd frontend && bun run dev",
+    "dev": "bun run frontend:dev && bun run backend:dev",
     "start": "bun run frontend:build && bun run backend:prod"
   },
   "private": true,
@@ -13,5 +14,9 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "osu-api-v2-js": "^1.1.3"
   }
 }
